@@ -30,11 +30,10 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)';
 // Add a class of flex-around to topMenuEl
 topMenuEl.classList.add('flex-around');
 
-const menuLinksEl = document.querySelectorAll('menuLinks');
-menuLinksEl.forEach(function (menuLink) {
+menuLinks.forEach(function (menuLink) {
   const aEl = document.createElement('a');
   // const linkEl = document.createTextNode(menuLink.text);
-  aEl.setAttribute('href', menuLink.href);
-  aEl.textContent = 'menuLink.text';
-  aEl.appendChild(topMenuEl);
+  aEl.setAttribute('href', 'menuLink.href');
+  aEl.textContent = menuLink.text;
+  topMenuEl.appendChild(aEl);
 });
